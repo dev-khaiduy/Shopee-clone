@@ -118,3 +118,130 @@
 .header__qr-download-img{
     height: 16px;
 }
+
+/* header notifycation */
+
+.header__notify{
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    cursor: default;
+    transform-origin: calc(100% - 20px) top ;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__notify::before {
+    content: "";
+    border-width :  20px 30px;
+    border-style:  solid ;
+    border-color:  transparent transparent var(--white-color) transparent ;
+    position: absolute;
+    right: 12px;
+    top: -30px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 90px;
+    top: -15px;
+    height: 20px;
+   
+}
+
+.header__navbar-item--has--notify:hover .header__notify{
+    display: block;
+}
+
+@keyframes headerNotifyGrowth{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header{
+    height: 40px ;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3{
+    color: #999;
+    margin:  0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    cursor: text;
+}
+
+.header__notify-list{
+    padding-left: 0;
+}
+
+.header__notify-item{
+    display: flex;
+}
+
+.header__notify-item:hover{
+    background-color: #f5d4d4;
+}
+
+.header__notify-item--viewed{  
+    background-color: rgba(238, 77, 45, 0.08);  
+}
+
+.header__notify-link{
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+.header__notify-img{
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info{
+    margin-left: 12px;
+}
+
+.header__notify-name{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.6rem;
+}
+
+.header__notify-desriotion{
+    display: block;
+    font-size: 1.2rem;
+    color: #756F6E;
+    line-height: 1.4rem;
+    margin-top: 4px;
+}
+
+.header__notify-footer{
+    display: flex;
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 16px 26px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 100%;
+}
