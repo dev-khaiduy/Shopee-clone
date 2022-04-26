@@ -975,6 +975,7 @@
 .home-product-item{
     background-color: var(--white-color);
     margin-top: 10px;
+    position: relative;
 }
 
 .home-product-item__img{
@@ -992,7 +993,7 @@
     line-height: 1.8rem;
     height: 3.6rem;
     padding: 0 10px;
-    margin: 10px 0 ;
+    margin: 10px 0px 6px ;
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -1003,31 +1004,72 @@
 }
 
 .home-product-item__price{
-
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .home-product-item__price-old{
-
+    font-size: 1.3rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
 }
 
 .home-product-item__price-current{
-
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
 }
 
 .home-product-item__action{
-
+    display: flex; 
+    justify-content: space-between;
+    margin: 8px 10px 0;
+    align-items: center;
 }
 
 .home-product-item__like{
+    font-size: 1.4rem;
+}
 
+i.home-product-item__like-icon-fill {
+    color: #F63D30;
+    display: none;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+    display: none ;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+    display: inline-block;
 }
 
 .home-product-item__rating{
+    font-size: 0.7rem;
+    color: #D5D5D5;
+    margin-left: auto;
+}
 
+.home-product-item__star--gold{
+    color: var(--star-gold-color);
+}
+
+.home-product-item__sold {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 6px;
 }
 
 .home-product-item__origin{
-
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300; 
+    margin: 6px 10px 0px ;
 }
 
 .home-product-item__brand{
@@ -1035,17 +1077,24 @@
 }
 
 .home-product-item__origin-name{
-
+    
 }
 
 .home-product-item__favourite{
-
+    position: absolute;
+    top : 10px ;
+    left: -4px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9rem;
 }
 
 .home-product-item__sale-off-percent{
-
+    
 }
 
 .home-product-item__sale-off-label{
 
 }
+
+
