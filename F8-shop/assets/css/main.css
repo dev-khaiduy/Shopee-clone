@@ -1005,6 +1005,7 @@
 
 .home-product-item__price{
     display: flex;
+<<<<<<< Updated upstream
     align-items: baseline;
     flex-wrap: wrap;
 }
@@ -1020,6 +1021,21 @@
     font-size: 1.6rem;
     color: var(--primary-color);
     margin-left: 10px;
+=======
+    margin-left: 10px;
+}
+
+.home-product-item__price-old{
+    font-size: 1.4rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.home-product-item__price-current{
+    font-size: 1.6rem;  
+    color: var(--primary-color);
+    
+>>>>>>> Stashed changes
 }
 
 .home-product-item__action{
